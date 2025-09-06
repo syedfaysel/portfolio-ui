@@ -38,19 +38,17 @@ async function fetchApi<T>(
 export const portfolioApi = {
   getProjects: () => fetchApi<ProjectDto[]>('/projects'),
   getProjectById: (id: string) => fetchApi<ProjectDto>(`/projects/${id}`),
-  getCertifications: () => fetchApi<CertificationDto[]>('/certifications'),
-  getCertificationById: (id: string) => fetchApi<CertificationDto>(`/certifications/${id}`),
-  getEducations: () => fetchApi<EducationDto[]>('/education'),
+  getCertifications: () => fetchApi<CertificationDto[]>('/certifications', {next: {revalidate: 60}}),
+  getCertificationById: (id: string) => fetchApi<CertificationDto>(`/certifications/${id}`, {next: {revalidate: 60}}),
+  getEducations: () => fetchApi<EducationDto[]>('/education', {next: {revalidate: 60}}),
   // getEducationById: (id: string) => fetchApi<Education>(`/educations/${id}`),
-  getExperiences: () => fetchApi<ExperienceDto[]>('/experiences'),
+  getExperiences: () => fetchApi<ExperienceDto[]>('/experiences', {next: {revalidate: 60}}),
   // getExperienceById: (id: string) => fetchApi<Experience>(`/experiences/${id}`),
-  getSkills: () => fetchApi<SkillsDto[]>('/skills'),
+  getSkills: () => fetchApi<SkillsDto[]>('/skills', {next: {revalidate: 60}}),
 }
 
 // Blog related API calls
 export const blogApi = {
-  getBlogs: () => fetchApi<BlogPostDto[]>('/blogs', {
-    cache: 'no-store',
-  }),
+  getBlogs: () => fetchApi<BlogPostDto[]>('/blogs', {next: {revalidate: 60}}),
   getBlogById: (id: string) => fetchApi<BlogPostDto>(`/blogs/${id}`),
 } 

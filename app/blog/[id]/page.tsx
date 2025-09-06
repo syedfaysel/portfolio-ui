@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { blogApi } from "@/lib/api-client"
 import { blogDtoToDomain } from "@/services/blogDtoToDomain"
 import { formatTime } from "@/lib/helper/format-time"
+import BlogContent from "@/components/blog-content"
 
 export default async function BlogPostPage({
   params,
@@ -56,9 +57,7 @@ export default async function BlogPostPage({
         </div>
 
         <div className="space-y-6">
-          {/* {post.content.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))} */}
+          <BlogContent content={post.content} />
         </div>
       </article>
     </div>

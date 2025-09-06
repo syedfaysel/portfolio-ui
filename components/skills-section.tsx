@@ -29,7 +29,7 @@ export default function SkillsSection({ skills }: SkillsSectionProps) {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="mb-2 text-3xl font-bold md:text-4xl">Technical Skills</h2>
+          <h2 className="mb-2 text-3xl font-bold md:text-4xl">Technical & Soft Skills</h2>
           <p className="mx-auto max-w-2xl text-muted-foreground">
             A comprehensive overview of my technical expertise and tools I work with.
           </p>

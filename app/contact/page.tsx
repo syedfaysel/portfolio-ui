@@ -21,7 +21,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium">Email</h3>
-                  <p className="text-muted-foreground">your.email@example.com</p>
+                  <p className="text-muted-foreground">sfa.rajo20@gmail.com</p>
                 </div>
               </CardContent>
             </Card>
@@ -32,7 +32,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium">Phone</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">+880 19284 97108</p>
                 </div>
               </CardContent>
             </Card>
@@ -43,7 +43,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium">Location</h3>
-                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <p className="text-muted-foreground">Dhaka, Bangladesh</p>
                 </div>
               </CardContent>
             </Card>

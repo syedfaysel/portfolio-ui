@@ -71,12 +71,16 @@ export default async function ProjectPage({
         <h2 className="text-2xl font-bold">Overview</h2>
         <p className="text-muted-foreground">{project.description}</p>
 
-        <h2 className="text-2xl font-bold">Features</h2>
-        <ul className="ml-6 list-disc space-y-2 text-muted-foreground">
-          {/* {project.features.map((feature, index) => (
-            <li key={index}>{feature}</li>
-          ))} */}
-        </ul>
+        {project.features && project.features.length > 0 && (
+          <>
+            <h2 className="text-2xl font-bold">Features</h2>
+            <ul className="ml-6 list-disc space-y-2 text-muted-foreground">
+              {project.features.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
+          </>
+        )}
       </div>
 
       {project.gallery && project.gallery.length > 0 && (
