@@ -42,99 +42,10 @@ export default function HeroSection() {
       />
     </div>
 
-    <div className="container relative z-10 mx-auto grid max-w-6xl gap-12 pt-12 md:grid-cols-2 md:items-center md:pt-20">
-      {/* Content */}
-      <div className="flex flex-col gap-6">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-          <Badge variant="secondary" className="mb-4 w-fit">
-            👋 Welcome to my portfolio
-          </Badge>
-        </motion.div>
-
-        <motion.h1
-          className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-            Software Engineer
-          </span>
-        </motion.h1>
-
-        <motion.h2
-          className="text-2xl font-medium text-muted-foreground md:text-3xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          And a Business Entrepreneur
-        </motion.h2>
-
-        <motion.p
-          className="max-w-md text-muted-foreground"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          I create exceptional digital experiences with modern technologies. Passionate about building scalable, user-friendly applications that make a difference. Where Code Meets Creativity – A Software Engineer & Polymath's Journey.
-        </motion.p>
-
-        <motion.div
-          className="flex flex-wrap gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          <Button asChild size="lg" className="group">
-            <Link href="/projects">
-              View My Work
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </Button>
-          <Button variant="outline" size="lg" asChild>
-            <a 
-              href="/Syed Faysel CV.pdf" 
-              download="Syed Faysel CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Download className="mr-2 h-4 w-4" /> Download CV
-            </a>
-          </Button>
-        </motion.div>
-
-        {/* Social Links */}
-        <motion.div
-          className="flex items-center gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          <span className="text-sm text-muted-foreground">Connect with me:</span>
-          <div className="flex gap-2">
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <Github className="h-4 w-4" />
-              </Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-4 w-4" />
-              </Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="mailto:your.email@example.com">
-                <Mail className="h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Profile Image */}
+    <div className="container relative z-10 mx-auto grid max-w-6xl gap-8 pt-8 md:gap-12 md:grid-cols-2 md:items-center md:pt-20">
+      {/* Profile Image - Now first in mobile */}
       <motion.div
-        className="relative flex justify-center"
+        className="relative flex justify-center order-first md:order-last"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}
@@ -152,7 +63,7 @@ export default function HeroSection() {
               ease: "easeInOut",
             }}
           />
-          <div className="relative h-80 w-80 overflow-hidden rounded-full border-4 border-background shadow-2xl">
+          <div className="relative h-64 w-64 md:h-80 md:w-80 overflow-hidden rounded-full border-4 border-background shadow-2xl">
             <Image
               src="/my-image.png?height=420&width=420"
               alt="Profile"
@@ -163,6 +74,95 @@ export default function HeroSection() {
           </div>
         </div>
       </motion.div>
+
+      {/* Content */}
+      <div className="flex flex-col gap-4 md:gap-6">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+          <Badge variant="secondary" className="mb-2 md:mb-4 w-fit">
+            👋 Welcome to my portfolio
+          </Badge>
+        </motion.div>
+
+        <motion.h1
+          className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+            Software Engineer
+          </span>
+        </motion.h1>
+
+        <motion.h2
+          className="text-xl font-medium text-muted-foreground md:text-2xl lg:text-3xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          And a Business Entrepreneur
+        </motion.h2>
+
+        <motion.p
+          className="max-w-md text-muted-foreground text-sm md:text-base"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          I create exceptional digital experiences with modern technologies. Passionate about building scalable, user-friendly applications that make a difference. Where Code Meets Creativity – A Software Engineer & Polymath's Journey.
+        </motion.p>
+
+        <motion.div
+          className="flex flex-wrap gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <Button asChild size="lg" className="group">
+            <Link href="/about">
+              More About Me
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
+          <Button variant="outline" size="lg" asChild>
+            <a
+              href="/download_cv"
+              download="/Syed_Faysel_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Download className="mr-2 h-4 w-4" /> Download Resume
+            </a>
+          </Button>
+        </motion.div>
+
+        {/* Social Links */}
+        <motion.div
+          className="flex items-center gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
+          <span className="text-sm text-muted-foreground">Connect with me:</span>
+          <div className="flex gap-2">
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="https://github.com/syedfaysel" target="_blank" rel="noopener noreferrer">
+                <Github className="h-4 w-4" />
+              </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="https://linkedin.com/in/syedfaysel" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-4 w-4" />
+              </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="mailto:sfa.rajo20@gmail.com">
+                <Mail className="h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </motion.div>
+      </div>
     </div>
   </section>
   )
