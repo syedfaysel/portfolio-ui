@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container mx-auto max-w-6xl px-4 py-8">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h3 className="mb-4 text-lg font-bold">Portfolio</h3>
+            <h3 className="mb-4 text-lg font-bold"><span className="text-primary">s</span>yedfaysel | Portfolio</h3>
             <p className="text-sm text-muted-foreground">
               A showcase of my work, skills, and experience as a full-stack developer.
             </p>
@@ -45,16 +45,15 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 text-lg font-bold">Contact</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>your.email@example.com</li>
-              <li>San Francisco, CA</li>
-              <li>+1 (555) 123-4567</li>
+              <li>sfa.rajo20@gmail.com</li>
+              <li>Dhaka, Bangladesh</li>
             </ul>
           </div>
           <div>
             <h3 className="mb-4 text-lg font-bold">Connect</h3>
             <div className="flex gap-4">
               <Link
-                href="https://github.com"
+                href="https://github.com/syedfaysel"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground"
@@ -63,7 +62,7 @@ export default function Footer() {
                 <Github className="h-5 w-5" />
               </Link>
               <Link
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/syedfaysel"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground"
@@ -72,7 +71,7 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5" />
               </Link>
               <Link
-                href="https://twitter.com"
+                href="https://x.com/syedfaysel"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground"
@@ -81,7 +80,7 @@ export default function Footer() {
                 <Twitter className="h-5 w-5" />
               </Link>
               <Link
-                href="mailto:your.email@example.com"
+                href="mailto:sfa.rajo20@gmail.com"
                 className="text-muted-foreground hover:text-foreground"
                 aria-label="Email"
               >
@@ -91,7 +90,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Syed Faysel Ahammad Rajo. All rights reserved.</p>
         </div>
       </div>
     </footer>

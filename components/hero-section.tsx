@@ -126,12 +126,12 @@ export default function HeroSection() {
           </Button>
           <Button variant="outline" size="lg" asChild>
             <a
-              href="/download_cv"
+              href="/Syed_Faysel_CV.pdf"
               download="/Syed_Faysel_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Download className="mr-2 h-4 w-4" /> Download Resume
+              <Download className="mr-2 h-4 w-4" /> Download CV
             </a>
           </Button>
         </motion.div>
