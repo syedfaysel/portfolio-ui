@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator"
 import EducationSection from "@/components/education-section"
 import { portfolioApi } from "@/lib/api-client"
 import SkillsSection from "@/components/skills-section"
+import Link from "next/link"
 
 export default async function AboutPage() {
   const res = await portfolioApi.getSkills();
@@ -65,23 +66,23 @@ export default async function AboutPage() {
             className="min-w-[140px] bg-red-600 text-white hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600"
             asChild
           >
-            <a 
+            <Link
               href="https://youtube.com/@syedfaysel" 
               target="_blank" 
               rel="noopener noreferrer"
             >
               <Youtube className="mr-2 h-4 w-4" /> YouTube
-            </a>
+            </Link>
           </Button>
           <Button variant="outline" size="lg" asChild>
-            <a 
-              href="/Syed Faysel CV.pdf" 
-              download="Syed Faysel CV.pdf"
+            <Link 
+              href="/Syed_Faysel_CV.pdf" 
+              download="Syed_Faysel_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Download className="mr-2 h-4 w-4" /> Download CV
-            </a>
+            </Link>
           </Button>
 
         </div>
